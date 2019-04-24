@@ -1,6 +1,7 @@
 # Paint
+## Diffie-Hellman challenge with weak modulus
 
-Diffie-Hellman challenge. We must find `secret` to get `shared_mix = your_mix**secret mod palette`. We only know that `my_mix = base**secret mod palette`.
+ We must find `secret` to get `shared_mix = your_mix**secret mod palette`. We only know that `my_mix = base**secret mod palette`.
 
 So to find `secret`, we need to solve the discrete logarithm problem in the integers modulo `palette` with generator `base`. Fortunately, we know that `base` has order `2**2045` in that group and that the discrete log problem is hard only if the order of the generator has a large prime factor.
 

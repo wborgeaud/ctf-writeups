@@ -1,6 +1,7 @@
 # Secret Sheep Society
+## Attack againgst AES-CBC mode.
 
-Attack againgst AES-CBC mode. We get a cookie `{"admin": false, "handle": "bam"}` AES-CBC encrypted with a known IV. By carefully modifying the IV, we can change the string `false` in the first block to `true`.
+We get a cookie `{"admin": false, "handle": "bam"}` AES-CBC encrypted with a known IV. By carefully modifying the IV, we can change the string `false` in the first block to `true`.
 
 The string `false` appears at indices 10 to 15 of the first block. Therefore, with C the being the first block, setting 
 ```

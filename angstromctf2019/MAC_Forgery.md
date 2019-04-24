@@ -1,6 +1,7 @@
 # MAC Forgery
+## CBC-MAC forgery with chosen IV.
 
-CBC-MAC forgery with chosen IV. We get a `welcome` message along with its CBC-MAC (including the IV). The goal is the find **any** other message on which we can compute a valid CBC-MAC (with control on the IV).
+We get a `welcome` message along with its CBC-MAC (including the IV). The goal is the find **any** other message on which we can compute a valid CBC-MAC (with control on the IV).
 
 The CBC-MAC implementation somewhat prevents from tampering by prepending the block length to the message. The block length of `welcome` is 7, therefore the CBC-MAC is computed with 
 ```

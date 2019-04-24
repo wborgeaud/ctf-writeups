@@ -1,6 +1,6 @@
 # Really Secure Algorithm
+## Straightforward RSA:
 
-Straightforward RSA:
 ```python
 from Crypto.Util.number import inverse
 from binascii import unhexlify

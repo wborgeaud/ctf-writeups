@@ -37,6 +37,6 @@ ABCDEFGH
 
 Finally, running it on the image given by the challenge gives the flag:
 ```bash
-~/Desktop/ctf/angstrom/rev$ python icthyo.py out.png 42
+python icthyo.py out.png 42
 actf{lurking_in_the_depths_of_random_bits}
 ```

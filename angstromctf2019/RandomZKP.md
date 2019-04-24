@@ -1,7 +1,7 @@
 # Random ZKP
 ## Lattice-based ZKP (with randomness). 
 
-This time we get to play with the actual protocol. We need to c_matd a n-vecor `s` to get the flag. We get a nxn-matrix `A` and a n-vector `b` such that `A*s+e=b`, with `e` following a normal distribition around 0.
+This time we get to play with the actual protocol. We need to find a n-vector `s` to get the flag. We get a nxn-matrix `A` and a n-vector `b` such that `A*s+e=b`, with `e` following a normal distribition around 0.
 
 The server gives random n-vectors `r` or `r+s` along with `A*r+e` with `e` having the same distribution as above. We cannot get both `r` and `r+s` (otherwise the challenge would again be trivial). 
 
@@ -11,7 +11,7 @@ A*(r+s)-A*r-e=A*s-e
 ```
 for many random values of `r` and `e` by asking the server K times.
 
-Averaging the results, we get `A*s-sum(e_i)/K`. By the law of large numbers, `sum(e_i)/K` converges to 0 as K grows to inc_matity. 
+Averaging the results, we get `A*s-sum(e_i)/K`. By the law of large numbers, `sum(e_i)/K` converges to 0 as K grows to infinity. 
 
 I ran this with K=300, then rounded the average to get `c` and assumed it was equal to `A*s`. If it's not the case, you can increase K:
 ```python

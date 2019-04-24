@@ -3,7 +3,7 @@
 
 We are given numbers `n, g, c` and the hint *Paillier*. Googling for it, we discover the Paillier cryptosystem, which is based on the hardness of [decisional composite residuosity assumption](https://en.wikipedia.org/wiki/Decisional_composite_residuosity_assumption), which is weaker than integer factorization. This is good news since the parameter `n` is easily factored.
 
-It is then a matter of copy-pasting the Wikipedia algorithm to get the flag:
+It is then a matter of copy-pasting the algorithm on Wikipedia to get the flag:
 ```python
 from math import gcd
 from Crypto.Util.number import inverse

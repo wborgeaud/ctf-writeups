@@ -7,6 +7,7 @@ Undestandind the binary took a lot of staring at the assembly. But basically, he
 
 Here is the code to recover the message:
 ```python
+# icthyo.py
 import numpy as np
 from PIL import Image
 import sys
@@ -28,7 +29,7 @@ if __name__=='__main__':
 ```
 
 Running on a custom image gives the correct result:
-```
+```bash
 ~/Desktop/ctf/angstrom/rev$ ./icthyo image.png outimage.png
 message (less than 256 bytes): ABCDEFGH
 ~/Desktop/ctf/angstrom/rev$ python icthyo.py outimage.png 8
@@ -37,6 +38,6 @@ ABCDEFGH
 
 Finally, running it on the image given by the challenge gives the flag:
 ```bash
-python icthyo.py out.png 42
+~/Desktop/ctf/angstrom/rev$ python icthyo.py out.png 42
 actf{lurking_in_the_depths_of_random_bits}
 ```

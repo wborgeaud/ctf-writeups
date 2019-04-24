@@ -3,7 +3,7 @@
 
 We get a binary that takes a 256x256 image and a message and outputs a modified 256x256 image.
 
-Undestandind the binary took a lot of staring at the assembly. But basically, he original image has the lsb of each pixel randomly flipped. Then the message is used to set the lsb of some pixels.
+Undestandind the binary took a lot of staring at the assembly. But basically, the original image has the lsb of each pixel randomly flipped. Then the message is used to specifically set the lsb of some pixels.
 
 Here is the code to recover the message:
 ```python

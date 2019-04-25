@@ -1,4 +1,4 @@
-# Random ZKP
+# Random ZKP - 250 points - 11 solves
 ## Lattice-based ZKP (with randomness). 
 
 This time we get to play with the actual protocol. We need to find a n-vector `s` to get the flag. We get a nxn-matrix `A` and a n-vector `b` such that `A*s+e=b`, with `e` following a normal distribition around 0.

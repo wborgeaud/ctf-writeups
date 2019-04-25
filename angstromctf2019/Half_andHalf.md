@@ -1,4 +1,4 @@
-# Half
+# Half - 50 points - 337 solves
 
 The flag `f` is split in two halves `f[:mid]` and `f[mid:]`. We get the value `f[:mid] ^ f[mid:] := c = \x15\x02\x07\x12\x1e\x100\x01\t\n\x01"`.
 

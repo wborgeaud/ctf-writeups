@@ -1,4 +1,4 @@
-# Powerball
+# Powerball - 200 points - 51 solves
 
 We need to find 6 numbers `b1,...,b6` between 0 and 4096. We are given random numbers `x1,...,x6` and `m1,...,m6` with
 ```

@@ -1,4 +1,4 @@
-# Secret Sheep Society
+# Secret Sheep Society - 120 points - 95 solves
 ## Attack againgst AES-CBC mode.
 
 We get a cookie `{"admin": false, "handle": "bam"}` AES-CBC encrypted with a known IV. By carefully modifying the IV, we can change the string `false` in the first block to `true`.

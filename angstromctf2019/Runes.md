@@ -1,4 +1,4 @@
-# Runes
+# Runes - 70 points - 234 solves
 ## Paillier cryptosytem
 
 We are given numbers `n, g, c` and the hint *Paillier*. Googling for it, we discover the Paillier cryptosystem, which is based on the hardness of [decisional composite residuosity assumption](https://en.wikipedia.org/wiki/Decisional_composite_residuosity_assumption), which is weaker than integer factorization. This is good news since the parameter `n` is easily factored.

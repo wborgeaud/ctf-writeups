@@ -1,4 +1,4 @@
-# Really Secure Algorithm
+# Really Secure Algorithm - 30 points - 540 solves
 ## Straightforward RSA:
 
 ```python

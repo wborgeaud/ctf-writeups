@@ -1,4 +1,4 @@
-# Icthyo
+# Icthyo - 130 points - 75 solves
 ## Custom steganography
 
 We get a binary that takes a 256x256 image and a message and outputs a modified 256x256 image. Also, we get an image of dinosaurs that is probably the output of the binary on an image with the message set to the flag.

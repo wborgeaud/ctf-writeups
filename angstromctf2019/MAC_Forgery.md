@@ -1,4 +1,4 @@
-# MAC Forgery
+# MAC Forgery - 220 points - 36 solves
 ## CBC-MAC forgery with chosen IV.
 
 We get a `welcome` message along with its CBC-MAC (including the IV). The goal is the find **any** other message on which we can compute a valid CBC-MAC (with control on the IV).

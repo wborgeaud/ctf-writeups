@@ -1,4 +1,4 @@
-# Wall-E
+# Wall-E - 130 points - 53 solves
 ## Useless RSA padding
 
 Looking at the source code, we see an obvious bug in the line

@@ -1,4 +1,4 @@
-# Classy Cipher - 20 points - 638 solves
+# Classy Cipher - 20 points - 708 solves
 ## Classic caesar cipher:
 
 ```python

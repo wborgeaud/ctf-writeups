@@ -1,4 +1,4 @@
-# Paint
+# Paint - 100 points - 74 solves
 ## Diffie-Hellman challenge with weak modulus
 
  We must find `secret` to get `shared_mix = your_mix**secret mod palette`. We only know that `my_mix = base**secret mod palette`.

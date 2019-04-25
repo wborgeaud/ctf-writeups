@@ -1,4 +1,4 @@
-# Lattice ZKP
+# Lattice ZKP - 150 points - 28 solves
 ## Lattice-based ZKP (without randomness). 
 
 I get into details on the protocol in the writup of *RandomZKP*.

@@ -1,4 +1,4 @@
-# ångstromCTF
+# ångstromCTF 2019
 ## Team: nitrow
 
 - Score: 2150 points

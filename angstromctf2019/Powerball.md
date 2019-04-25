@@ -4,7 +4,7 @@ We need to find 6 numbers `b1,...,b6` between 0 and 4096. We are given random nu
 ```
 mi = bi + (v-xi)**d mod n
 ```
-for a secret `d` and a given v. However, we know `n` and `e` with `e*d=1 mod phi(n)`.
+for a secret `d` and a given `v`. However, we know `n` and `e` with `e*d=1 mod phi(n)`.
 
 Therefore, for each `i`, we just have to loop over all possible values of `bi` to check if 
 ```

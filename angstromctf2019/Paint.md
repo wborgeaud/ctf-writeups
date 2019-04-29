@@ -3,7 +3,7 @@
 
  We must find `secret` to get `shared_mix = your_mix**secret mod palette`. We only know that `my_mix = base**secret mod palette`.
 
-So to find `secret`, we need to solve the discrete logarithm problem in the integers modulo `palette` with generator `base`. Fortunately, we know that `base` has order `2**2045` in that group and that the discrete log problem is hard only if the order of the generator has a large prime factor.
+So to find `secret`, we need to solve the discrete logarithm problem in the integers modulo `palette` with generator `base`. By Lagrange's theorem, we know that the order of `base` is a power of two (since it divides `palette=2**2048`). By looping over possible orders `2**i, 0<i<2048`, we find that base has order 2045. Fortunately, the discrete log problem is hard only if the order of the generator has a large prime factor, which is definitely not the case here.
 
 Using the [Pohlig–Hellman algorithm](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm), we quickly find `secret` from `my_mix`, `base` and `palette`. Knowing `secret`, getting the flag is straightforward.
 

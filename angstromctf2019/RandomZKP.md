@@ -51,4 +51,4 @@ sage: c = matrix(Integers(c),c).transpose()
 sage: s = A.solve_right(c)
 ```
 
-I then decrypted the flag as in the challenge RandomZKP to get the flag `actf{oops_sorry_for_the_lack_of_randomness}`.
+I then decrypted the flag as in the challenge LatticeZKP to get the flag `actf{oops_sorry_for_the_lack_of_randomness}`.

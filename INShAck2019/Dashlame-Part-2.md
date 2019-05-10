@@ -7,8 +7,8 @@ We get a python script implementing a password manager. The password manager tak
 
 Let `P` be the database plaintext, `E1` the first encryption and `E2` the second encryption. 
 
-The length of `E1` is divisible by the AES blocksize which is 16. Therefore, the padding scheme of the script adds 15 random character + the character `\xa0` at the end of `E1` before encryption. This is our fist attack vector. We decrypt `E2` with each of the ~500'000 passphrase and keep only the ~2'000 passphrase resulting in a decryption ending with `\xa0`. 
+The length of `E1` is divisible by the AES blocksize which is 16. Therefore, the padding scheme of the script adds 15 random character + the character `\x10` at the end of `E1` before encryption. This is our fist attack vector. We decrypt `E2` with each of the ~500'000 passphrase and keep only the ~2'000 passphrase resulting in a decryption ending with `\x10`. 
 
-By playing with the code, we know that the database plaintext begins with the string *SQLite*. This is our second attack vector. For each of the ~2'000 possible decryptions ending with the character `\xa0`, we decrypt the first block using all of the ~500'000 passphrases. If one of them begins with *SQLite*, we hit the jackpot. 
+By playing with the code, we know that the database plaintext begins with the string *SQLite*. This is our second attack vector. For each of the ~2'000 possible decryptions ending with the character `\x10`, we decrypt the first block using all of the ~500'000 passphrases. If one of them begins with *SQLite*, we hit the jackpot. 
 
 The whole process runs in around 10 seconds on my laptop and gives the passphrases *spanish* and *inquisition*. Decrypting the `admin.dla` database with them gives the flag `INSA{D0_you_f1nD_it_Risible_wh3N_I_s4y_th3_name}`.

@@ -18,5 +18,10 @@ sage: pow(m, 65537, n)
 ```
 
 The first important observation is that 
-```pow(2*p+3*q, e1, n)=(2*p)**e1 + (3*q)**e2 modulo n,``` 
+```
+pow(2*p+3*q, e1, n)=(2*p)**e1 + (3*q)**e2 modulo n,
+``` 
 and similarly with `e2`. This is because the cross terms are all divisible by `p*q=n`. 
+
+Now the strategy is clear. We need to massage these numbers to end up with a number divisible by `p` (or `q`). Then, taking the gcd with `n` will give `p`. Here is the math:
+![Math](latexed.png)

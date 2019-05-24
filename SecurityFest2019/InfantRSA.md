@@ -1,7 +1,7 @@
 # Infant RSA - 537 points - 19 solves
 ## RSA challenge with partial information on primes
 
-This was a neat RSA challenge where we receive a ciphertext along with two powers of linear combinations of `p` and `q`. Here are the parameter we get:
+This was a neat RSA challenge where we receive a ciphertext along with two powers of linear combinations of `p` and `q`. Here are the parameters we get:
 ```
 sage: n
 808493201253189889201870335543001135601554189565265515581299663310211777902538379504356224725568544299684762515298676864780234841305269234586977253698801983902702103720999490643296577224887200359679776298145742186594264184012564477263982070542179129719002846743110253588184709450192861516287258530229754571

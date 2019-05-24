@@ -25,6 +25,7 @@ and similarly with `e2`. This is because the cross terms are all divisible by `p
 
 Now the strategy is clear. We need to massage these numbers to end up with a number divisible by `p` (or `q`). Then, taking the gcd with `n` will give `p`. Here is the math:
 ![Math](latexed.png)
+
 The number `z` is definitely ugly, but it has the property of being divisible by `p` and not by `q`. Therefore, `gcd(z,n)=p` and we're done!
 
 Here is the python implementation:

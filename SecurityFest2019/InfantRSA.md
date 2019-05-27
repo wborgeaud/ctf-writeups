@@ -1,7 +1,7 @@
 # Infant RSA - 537 points - 19 solves
 ## RSA challenge with partial information on primes
 
-This was a neat RSA challenge where we receive a ciphertext along with two powers of linear combinations of `p` and `q`. Here are the parameter we get:
+This was a neat RSA challenge where we receive a ciphertext along with two powers of linear combinations of `p` and `q`. Here are the parameters we get:
 ```
 sage: n
 808493201253189889201870335543001135601554189565265515581299663310211777902538379504356224725568544299684762515298676864780234841305269234586977253698801983902702103720999490643296577224887200359679776298145742186594264184012564477263982070542179129719002846743110253588184709450192861516287258530229754571
@@ -23,15 +23,14 @@ pow(2*p+3*q, e1, n)=(2*p)**e1 + (3*q)**e2 modulo n,
 ``` 
 and similarly with `e2`. This is because the cross terms are all divisible by `p*q=n`. 
 
-Now the strategy is clear. We need to massage these numbers to end up with a number divisible by `p` (or `q`). Then, taking the gcd with `n` will give `p`. Here is the math:
+Now the strategy is clear. We need to massage these numbers to end up with a number divisible by `p` (or `q`). Then, taking the gcd with `n` will give `p`. Here is my approach:
 ![Math](latexed.png)
 
 The number `z` is definitely ugly, but it has the property of being divisible by `p` and not by `q`. Therefore, `gcd(z,n)=p` and we're done!
 
 Here is the python implementation:
 ```python
-from Crypto.Util.number import inverse, long_to_bytes
-from math import gcd
+from Crypto.Util.number import inverse, long_to_bytes, GCD
 
 n = 808493201253189889201870335543001135601554189565265515581299663310211777902538379504356224725568544299684762515298676864780234841305269234586977253698801983902702103720999490643296577224887200359679776298145742186594264184012564477263982070542179129719002846743110253588184709450192861516287258530229754571
 e1 = 1761208343503953843502754832483387890309882905016316362547159951176446446095631394250857857055597269706126624665037550324
@@ -44,7 +43,7 @@ xe2 = pow(x,e2,n)
 ye1 = pow(y,e1,n)
 z = ye1 - pow(inverse(3,n)*7,e1*e2,n)*xe2
 z %= n
-p = gcd(z,n)
+p = GCD(z,n)
 q = n//p
 
 d = inverse(65537, (p-1)*(q-1))

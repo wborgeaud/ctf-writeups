@@ -6,5 +6,7 @@ This is a nice challenge where we get an RSA public key along with an encrypted 
 ```
 |A*P-B*Q| < 10000, with 1 <= A,B <= 1000.
 ```
-bla
+We transform this constraint into a second degree polynomial with unknown `P` as follows:
+![Math](mathcaulingo.png)
+
 

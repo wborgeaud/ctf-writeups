@@ -2,6 +2,7 @@
 ## Weird approximate gcd problem 
 
 Note: I didn't solve this challenge during the ctf. Since there aren't any write-ups available at the time of writing, I decided to write one.
+
 We get a script `cactus.py`:
 ```python
 import random
@@ -63,7 +64,7 @@ b"sctf{wi\xe23\xd4z'\x81\xf8O\xaf\xb5\xed\xe1`\xc8O.\t\x16\x1bk\xc4\xdc\x1ba\x8b
 divisor: 604
 b"sctf{wi\xe23\xd4z'\x81\xf8O\xaf\xb5\xed\xe1`\xc8O.\t\x16\x1bk\xc4\xdc\x1ba\x8b<'E\x94uE"
 ```
-We see the beginning of a flag starting with `sctf`, always with the divisor 604. We guess that this is the real value of `r` and stop looking for other divisors, which speeds up the brute-force. Finally, we only print stings with only printable characters:
+We see the beginning of a flag starting with `sctf`, always with the divisor 604. We guess that this is the real value of `r` and stop looking for other divisors, which speeds up the brute-force. Finally, we only print strings containing only printable characters:
 ```python
 from string import printable
 for i in range(313):
@@ -79,10 +80,10 @@ which outputs
 b'sctf{wh00ps_th4t_w4sntzSxp0nent1ati0n}'
 b'sctf{wh00ps_th4t_w4snt_3xp0nent1ati0n}'
 ```
-I guess that the second one is probably the flag.
+I guess that the second one is probably the flag (it hints that `2^self.range` actually was a typo).
 
 ### Post-mortem:
-During the ctf, I tried way more complex methods, researching the *approximate gcd problem* which is used in some crypto algorithm. In my head it was clear that I should use many number in the output and somehow find the flag by computing their approximate gcd.
+During the ctf, I tried way more complex methods, researching the *approximate gcd problem* which is used in some crypto algorithm. In my head it was clear that I should use many numbers in the output and somehow find the flag by computing their approximate gcd.
 
 As we can see in this write-up, we actually only need one of the output (albeit smartly chosen so that a lot of the highest bits come from the error `e`) and that the solution can be found using a simple brute-force search on `r` and `e`. 
 

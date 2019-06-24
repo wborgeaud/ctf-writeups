@@ -9,4 +9,6 @@ This is a nice challenge where we get an RSA public key along with an encrypted 
 We transform this constraint into a second degree polynomial with unknown `P` as follows:
 ![Math](mathcaulingo.png)
 
+The discriminant `Δ`
+
 

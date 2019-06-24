@@ -63,4 +63,15 @@ d = inverse(e, (P-1)*(Q-1))
 m = pow(c, d, N)
 print(str(long_to_bytes(m),'utf-8'))
 ```
+This prints the following:
+```
+Hey there!
 
+If you are able to decrypt this message, you must a life form with high intelligence!
+
+Therefore, we would like to invite you to our dancing party! 
+
+Here’s your invitation code: CTF{017d72f0b513e89830bccf5a36306ad944085a47}
+```
+
+Thanks Google! I am always amazed at how creative CTF organizers can get with RSA challenges! 

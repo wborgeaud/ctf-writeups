@@ -9,7 +9,7 @@ The input consists of 20 levers, and we need to find an assignement Up/Down of t
 
 There are 2^20 configurations of levers, which is around 1 million. So this is easily bruteforceable (we could also use Z3 to be fancy). The only question is: how do we simulate the circuit?
 
-After spending some time looking how to write scripts in Minetest, get the map data, or just use a bot, I decided it would be just easier to write the circuit on a sheet of paper and transcript it in python. So I did just that...
+After spending some time looking how to write scripts in Minetest, get the map data, or just use a bot, I decided it would just be easier to write the circuit on a sheet of paper and transcript it in python. So I did just that...
 
 After this tedious, boring job, solving the challenge is easy. Here is the python implementation:
 ```python

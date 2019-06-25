@@ -60,7 +60,7 @@ I thought I had the solution right there: Just manually change the time of the r
 But that's right about when my initial crappy script terminated... with the flag! It took around 1h20, but to my surpise it worked. The target seems to be in the center of London.
 
 There is probably a smarter way to solve this challenge, but my crappy 30 lines script did it, so... oh well.
-```
+```bash
 $ time python sol.py
 CTF{Who_is_Tardis_Ormandy}
 

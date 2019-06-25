@@ -13,7 +13,7 @@ The discriminant `Δ` must be a perfect square for `P` to be an integer. We can 
 
 However, this would take forever to run (~1 day on my laptop). So we can be a little more clever and realize that since `x**2 << 4*A*B*N`, if the square root of `Δ` is integer, it must the ceiling of the square root of `4*A*B*N`. In turn, this implies that we only need to check that the difference between `4*A*B*N` and the square of the ceiling of its square root is a perfect square, namely `x**2`. Hopefully, it is clearer in LaTeX:
 ![Math](discopt.png)
-Therefore, we only need to check that the right-hand side is a perfect quare. If that is the case, its square root is `x`. Thus, we have just removed `x` from the parameters needed to bruteforce! We thus just need to bruteforce over `A` and `B`, which are both less than 1000. This is definitely manageable!
+Therefore, we only need to check that the right-hand side is a perfect square. If that is the case, its square root is `x`. Thus, we have just removed `x` from the parameters needed to bruteforce! We thus just need to bruteforce over `A` and `B`, which are both less than 1000. This is definitely manageable!
 
 To recapitulate:
 - We write `P` as the solution of a quadratic equation with 3 small unkown parameters `A,B,x`. 

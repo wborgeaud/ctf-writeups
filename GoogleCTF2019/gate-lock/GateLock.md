@@ -69,11 +69,11 @@ def fourth_stage(x):
 
 def circuit(arr):
     f = first_stage(arr)
-    f = [None]+f
+    f = [None] + f
     s = second_stage(f)
     s = [None] + s
     t = third_stage(s,f)
-    t=[None] + t
+    t= [None] + t
     f4 = fourth_stage(t)
     last = f4[0] and (f4[1] and t[3])
     return last

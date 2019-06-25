@@ -69,4 +69,5 @@ user    10m34.976s
 sys 0m25.452s
 ```
 
-Note: After googling `Tardis Ormandy`, it seems that `Ormandy` is time machine in the TV show Dr. Who. This gives an hint that the 'true' solution indeed involves hacking the time in the token. I'll try to keep researching that direction.
+## Note
+After googling `Tardis Ormandy` (which is a part of the flag), it seems that `Ormandy` is time machine in the TV show Dr. Who. This gives an hint that the 'true' solution indeed involves hacking the time in the token. I'll try to keep researching that direction.

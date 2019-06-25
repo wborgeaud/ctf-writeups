@@ -55,7 +55,7 @@ When base64 decoding this token, we get the following hex string:
 ```
 This is a mess and it appears to change randomly at each request. The only part that is stable is the first 9 bytes, in this case `80000000005d126f58`. And surprise, `0x5d126f58=1561489240` is the epoch time of the request. So that is how the server keeps track of the time. 
 
-I thought I had the solution right there: Just manually change the time of the request to, say, 1 hour later, and the server will think that I've made my 100 meters at 0.1km/h instead of 3600km/h. But that failed miserably... Apparently, the time also has an influence on the rest of the token. I'm thinking about a hash or HMAC for example, maybe linked with the coordinates. So I tried to research that and understand that mysterious token.
+I thought I had the solution right there: Just manually change the time of the request to, say, 1 hour later, and the server will think that I've made my 100 meters at 0.1km/h instead of 3600km/h. But that failed miserably, the server refuses my token and ouptuts an error... Apparently, the time also has an influence on the rest of the token. I'm thinking about a hash or HMAC for example, maybe linked with the coordinates. So I tried to research that and understand that mysterious token.
 
 But that's right about when my initial crappy script terminated... with the flag! It took around 90 minutes but to my surpise, it worked. The target seems to be in the center of London.
 

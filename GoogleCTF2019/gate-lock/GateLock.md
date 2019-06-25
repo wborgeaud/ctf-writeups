@@ -7,9 +7,9 @@ Ok, this one was a pain in the ass... We get a Minetest (a Minecraft-like game) 
 ![Initial](initial.png)
 The input consists of 20 levers, and we need to find an assignement Up/Down of these levers to light up the final wire of this circuit.
 
-There are 2^20 configurations of levers, which is around 1 million. So this is easily bruteforceable (we could also use Z3 to be fancy). The only question is how do we simulate the circuit?
+There are 2^20 configurations of levers, which is around 1 million. So this is easily bruteforceable (we could also use Z3 to be fancy). The only question is: how do we simulate the circuit?
 
-After spending some time looking how to write scripts in Minetest, get the map data, or just use a bot, I decided it would be just easier to write the circuit on a cheat of paper and transcript it in python. So I did just that...
+After spending some time looking how to write scripts in Minetest, get the map data, or just use a bot, I decided it would just be easier to write the circuit on a sheet of paper and transcript it in python. So I did just that...
 
 After this tedious, boring job, solving the challenge is easy. Here is the python implementation:
 ```python
@@ -69,11 +69,11 @@ def fourth_stage(x):
 
 def circuit(arr):
     f = first_stage(arr)
-    f = [None]+f
+    f = [None] + f
     s = second_stage(f)
     s = [None] + s
     t = third_stage(s,f)
-    t=[None] + t
+    t= [None] + t
     f4 = fourth_stage(t)
     last = f4[0] and (f4[1] and t[3])
     return last

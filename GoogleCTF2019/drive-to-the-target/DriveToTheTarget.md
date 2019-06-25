@@ -21,7 +21,7 @@ import random
 
 url = 'https://drivetothetarget.web.ctfcompetition.com/'
 x = req.get(url)
-la, lo = 1, 0
+la, lo = 1, 0 # Which coordinates should we follow?
 while True:
     par = re.findall('value="(.*?)"',x.text)
     params = {}
@@ -32,16 +32,16 @@ while True:
     x = req.get(url,params=params)
 
     give_me_flag = re.findall(r'CTF{.*?}',x.text)
-    if give_me_flag:
+    if give_me_flag: # Is the flag in the response?
         print(give_me_flag[0])
         break
 
-    if 'You are getting away' in x.text:
-        while True:
+    if 'You are getting away' in x.text: # If we are moving away...
+        while True: # Change the direction to a random (non-zero) one.
             la, lo = random.choice([-1,0,1]), random.choice([-1,0,1])
             if la*lo != 0:
                 break
-    time.sleep(0.2)
+    time.sleep(0.2) # Sleep to avoid going too fast.
 ```
 This script takes very small steps (too avoid the `This is too fast` message). We're starting somewhere in the UK, so if the target is, e.g., in Hawaii, it will never finish. But anyway, it's worth a shot so I let it run in the background.
 

@@ -2,7 +2,7 @@
 # Geographical gradient descent
 
 ![Description](drivetothetarget.png)
-The site gives us inputs for latitude and longitude and we need to move to the target modifying these two variables. When submiting new coordinates, the server responds as follows:
+The site gives us inputs for latitude and longitude and we need to move to the target modifying these two variables. When submiting new coordinates, the server responds with one of four responses:
 - You are getting closer to the target.
 - You are getting away from the target.
 - You are moving too fast.

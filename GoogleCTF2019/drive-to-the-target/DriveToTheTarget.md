@@ -43,7 +43,7 @@ while True:
                 break
     time.sleep(0.2) # Sleep to avoid going too fast.
 ```
-This script takes very small steps (too avoid the `This is too fast` message). We're starting somewhere in the UK, so if the target is, e.g., in Hawaii, it will never finish. But anyway, it's worth a shot so I let it run in the background.
+This script takes very small steps (too avoid the `This is too fast!` message). We're starting somewhere in the UK, so if the target is, e.g., in Hawaii, it will never finish. But anyway, it's worth a shot so I let it run in the background.
 
 I then tried to understand how the backend works. The server keeps track of the time of our requests to compute the speed. If I move 100 meters 0.1 seconds after my previous request, the server will compute my speed as 3600km/h and say I'm going too fast. The server knows my time and coordinates using a token in the url. Here is a typical url:
 ```

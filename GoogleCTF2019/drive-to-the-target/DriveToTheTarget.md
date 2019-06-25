@@ -57,7 +57,7 @@ This is a mess and it appears to change randomly at each request. The only part 
 
 I thought I had the solution right there: Just manually change the time of the request to, say, 1 hour later, and the server will think that I've made my 100 meters at 0.1km/h instead of 3600km/h. But that failed miserably... Apparently, the time also has an influence on the rest of the token. I'm thinking about a hash or HMAC for example, maybe linked with the coordinates. So I tried to research that and understand that mysterious token.
 
-But that's right about when my initial crappy script terminated... with the flag! It took around 1h30, but to my surpise it worked. The target seems to be in the center of London.
+But that's right about when my initial crappy script terminated... with the flag! It took around 90 minutes but to my surpise, it worked. The target seems to be in the center of London.
 
 There is probably a smarter way to solve this challenge, but my crappy 30 lines script did it, so... oh well.
 ```bash

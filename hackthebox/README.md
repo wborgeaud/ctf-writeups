@@ -1,6 +1,6 @@
 # HackTheBox write-ups
 
-Write-ups for active boxes are encrypted using AES-CBC with the `root.txt` hash of the box as the password.
+Write-ups for active boxes are encrypted using AES-CBC with the lowerscase `root.txt` hash of the box as the password.
 
 Example decryption:
 ```bash

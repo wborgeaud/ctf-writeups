@@ -1,7 +1,6 @@
 # Active boxes
 hackthebox/Craft.md
 hackthebox/Jarvis.md
-hackthebox/Haystack.md
 hackthebox/Player.md
 hackthebox/Heist.md
 hackthebox/Sniper.md
@@ -14,6 +13,7 @@ hackthebox/Mango.md
 
 # Retired boxes
 hackthebox/Writeup.md.enc
+hackthebox/Haystack.md.enc
 
 # Root hashes
 hackthebox/root-hashes

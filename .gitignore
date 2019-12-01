@@ -1,7 +1,6 @@
 # Active boxes
 hackthebox/Craft.md
 hackthebox/Player.md
-hackthebox/Heist.md
 hackthebox/Sniper.md
 hackthebox/Zetta.md
 hackthebox/Bankrobber.md
@@ -16,6 +15,7 @@ hackthebox/Traverxec.md
 hackthebox/Writeup.md.enc
 hackthebox/Haystack.md.enc
 hackthebox/Jarvis.md.enc
+hackthebox/Heist.md.enc
 
 # Root hashes
 hackthebox/root-hashes

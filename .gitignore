@@ -1,6 +1,5 @@
 # Active boxes
 hackthebox/Sniper.md
-hackthebox/RE.md
 hackthebox/Forest.md
 hackthebox/Registry.md
 hackthebox/Mango.md
@@ -17,6 +16,7 @@ hackthebox/Player.md.enc
 hackthebox/Zetta.md.enc
 hackthebox/Bankrobber.md.enc
 hackthebox/Postman.md.enc
+hackthebox/RE.md.enc
 
 # Root hashes
 hackthebox/root-hashes
